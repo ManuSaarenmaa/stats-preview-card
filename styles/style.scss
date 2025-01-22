@@ -1,0 +1,68 @@
+//variables// primary
+$mainBg: hsl(233, 47%, 7%);
+$cardBg: hsl(244, 38%, 16%);
+$accent: hsl(277, 64%, 61%);
+
+$mainHeading: hsl(0, 0%, 100%);
+$mainP: hsla(0, 0%, 100%, 0.75);
+$statHeading: hsla(0, 0%, 100%, 0.6);
+
+@mixin fonts {
+    font-family: "Inter", "Lexend Deca";
+    font-weight: 400, 700;
+}
+
+body {
+    width: 1440px;
+    height: 446px;
+    background-color: $mainBg;
+    margin: 17%;
+}
+
+header {
+    @include fonts();
+    color: $mainHeading;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 6%;
+}
+
+p {
+    @include fonts();
+    color: $mainP;
+}
+
+div.main { 
+    background-color: $cardBg;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+span.numbers {
+    @include fonts();
+    font-size: 1rem;
+    color: $statHeading;
+    display: flex;
+   
+}
+
+span.other {
+    @include fonts();
+    font-size: 1rem;
+    color:$statHeading;
+    
+}
+
+div.texts {
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+
+}
+
+span.purple{
+    color: $accent;
+}
