@@ -1,0 +1,77 @@
+//variables// primary
+$mainBg: hsl(233, 47%, 7%);
+$cardBg: hsl(244, 38%, 16%);
+$accent: hsl(277, 64%, 61%);
+
+$mainHeading: hsl(0, 0%, 100%);
+$mainP: hsla(0, 0%, 100%, 0.75);
+$statHeading: hsla(0, 0%, 100%, 0.6);
+
+@mixin fonts {
+    font-family: "Inter", "Lexend Deca";
+    font-weight: 400, 700;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $mainBg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main{
+    width: 375px;
+    height: 700px;
+    background-color: $cardBg;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    color: $mainHeading;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.7rem;
+    padding: 5%;
+}
+
+.purple{
+    color: $accent;
+}
+
+p{
+    color: $mainP;
+    padding: 0px 7% 0px 7%;
+    text-align: center;
+}
+
+.texts{
+    order: 2;
+}
+
+.numbers{
+    color: $mainHeading;
+    font-weight: bold;
+    white-space: pre-line;
+    display: flex;
+    line-height: 50px;
+}
+
+.other{
+    color: $statHeading;
+    text-align: center;
+}
+
+
+img{
+    width: 375px;
+    border-radius: 15px;
+    order: 1;       
+}
+
