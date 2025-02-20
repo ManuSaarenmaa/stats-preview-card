@@ -13,7 +13,9 @@ $statHeading: hsla(0, 0%, 100%, 0.6);
 }
 
 *{
+    @include fonts;
     box-sizing: border-box;
+
 }
 
 body{
@@ -26,7 +28,7 @@ body{
 
 .main{
     width: 375px;
-    height: 700px;
+    height: 750px;
     background-color: $cardBg;
     border-radius: 15px;
     display: flex;
@@ -38,7 +40,7 @@ header{
     font-weight: bold;
     text-align: center;
     font-size: 1.7rem;
-    padding: 5%;
+    padding: 5% 9% 0px 9%;
 }
 
 .purple{
@@ -47,7 +49,7 @@ header{
 
 p{
     color: $mainP;
-    padding: 0px 7% 0px 7%;
+    padding: 0px 9% 0px 9%;
     text-align: center;
 }
 
@@ -59,19 +61,76 @@ p{
     color: $mainHeading;
     font-weight: bold;
     white-space: pre-line;
-    display: flex;
-    line-height: 50px;
 }
 
 .other{
     color: $statHeading;
     text-align: center;
+
 }
+.stats{
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: repeat(6, 35px);
+    position: relative;
+    padding-left: 35%;
+    padding-top: 5%;
+}
+
+@mixin numbers{
+    color: $mainHeading;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+@mixin text{
+    color: $mainP;
+    font-weight: 400;
+    text-align: center;
+}
+
+.n1{
+    @include numbers
+}
+
+.o1{
+    @include text;
+    grid-row-start: 2;
+}
+ 
+.n2{
+    @include numbers;
+}
+
+.o2{
+    @include text;
+    grid-row-start: 4;
+}
+
+.n3{
+    @include numbers;
+}
+
+.o3{
+    @include text;
+}
+
 
 
 img{
     width: 375px;
-    border-radius: 15px;
-    order: 1;       
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    order: 1; 
+    opacity: 0.6;      
+}
+
+div.kuva{
+    background-color:$accent;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 309px;
+ 
 }
 

@@ -1,3 +1,8 @@
+* {
+  font-family: "Inter", "Lexend Deca";
+  font-weight: 400, 700;
+}
+
 body {
   width: 1100px;
   height: 446px;
@@ -34,25 +39,54 @@ div.main {
   display: flex;
 }
 
-span.numbers {
-  font-family: "Inter", "Lexend Deca";
-  font-weight: 400, 700;
-  font-size: 1.5rem;
-  color: hsl(0, 0%, 100%);
-  display: flex;
-  padding: 40px 0 0 60px;
-  font-weight: bold;
-  word-spacing: 103px;
+.stats {
+  display: grid;
+  margin-top: 50px;
+  padding-left: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 30px);
 }
 
-span.other {
-  font-family: "Inter", "Lexend Deca";
-  font-weight: 400, 700;
-  font-size: 0.9rem;
-  color: hsla(0, 0%, 100%, 0.6);
-  padding: 5px 0 0 60px;
-  word-spacing: 68px;
-  text-transform: uppercase;
+.n1 {
+  color: hsl(0, 0%, 100%);
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding-left: 25px;
+}
+
+.o1 {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-weight: 400;
+  text-align: center;
+  grid-column: 1;
+}
+
+.n2 {
+  color: hsl(0, 0%, 100%);
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding-left: 25px;
+  margin-left: 5px;
+}
+
+.o2 {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-weight: 400;
+  text-align: center;
+}
+
+.n3 {
+  color: hsl(0, 0%, 100%);
+  font-weight: bolder;
+  font-size: 1.5rem;
+  padding-left: 25px;
+  margin-left: 13px;
+}
+
+.o3 {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-weight: 400;
+  text-align: center;
 }
 
 div.texts {

@@ -12,6 +12,10 @@ $statHeading: hsla(0, 0%, 100%, 0.6);
     font-weight: 400, 700;
 }
 
+*{
+    @include fonts;
+}
+
 body {
     width: 1100px;
     height: 446px;
@@ -47,24 +51,55 @@ div.main {
     display: flex;
 }
 
-span.numbers {
-    @include fonts();
-    font-size: 1.5rem;
-    color: $mainHeading;
-    display: flex;
-    padding: 40px 0 0 60px;
-    font-weight: bold;
-    word-spacing: 103px;
+.stats{
+    display: grid;
+    margin-top: 50px;
+    padding-left: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 30px);
 }
 
-span.other {
-    @include fonts();
-    font-size: 0.9rem;
-    color:$statHeading;
-    padding: 5px 0 0 60px;
-    word-spacing: 68px;
-    text-transform: uppercase;
+@mixin numbers{
+    color: $mainHeading;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding-left: 25px;
 }
+
+@mixin text{
+    color: $mainP;
+    font-weight: 400;
+    text-align: center;
+}
+
+.n1{
+    @include numbers;
+}
+
+.o1{
+    @include text;
+    grid-column: 1;
+}
+
+.n2{
+    @include numbers;
+    margin-left: 5px;
+}
+
+.o2{
+    @include text;
+}
+
+.n3{
+    @include numbers;
+    margin-left: 13px
+}
+
+.o3{
+    @include text;
+}
+
+
 
 div.texts {
     display: flex;
@@ -83,3 +118,4 @@ div.kuva{
 img{
     opacity: 0.6;
 }
+
